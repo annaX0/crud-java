@@ -41,13 +41,15 @@ public class Login extends javax.swing.JFrame {
         
         ResultSet rs = ps.executeQuery();
 
-        if(rs.next()){
+       
+        if(rs.next() && !txtEmail.getText().equals("") && !txtSenha.getText().equals("")){
             Cadastro tela = new Cadastro();
             tela.setVisible(true);
             dispose();
             JOptionPane.showMessageDialog(null, "Bem vindo");
         }else {
-           System.out.println("deu ruim");
+           JOptionPane.showMessageDialog(null, "Email ou senha inválido");
+
 
         }
         
