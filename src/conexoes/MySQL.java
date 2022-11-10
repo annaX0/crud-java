@@ -5,6 +5,7 @@
  */
 package conexoes;
 
+import com.mysql.cj.xdevapi.PreparableStatement;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;
@@ -131,5 +132,9 @@ public class MySQL {
             return false;
         }
         return true;
+    }
+
+    PreparableStatement prepareStatement(String sql) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

@@ -5,6 +5,11 @@
 package telas;
 import classes.Usuario;
 import conexoes.MySQL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
+
 
 /**
  *
@@ -12,6 +17,7 @@ import conexoes.MySQL;
  */
 public class Login extends javax.swing.JFrame {
     MySQL conectar = new MySQL();
+    Usuario validaUsuario = new Usuario();
     /**
      * Creates new form Login
      */
@@ -19,12 +25,37 @@ public class Login extends javax.swing.JFrame {
         initComponents();
     }
     
-    private void valida(String usuario){
+    private void verificaUsuarios(Usuario validaUsuario){
     this.conectar.conectaBanco();
-    String result = "";
-    String comando = "SELECT nome from funcionario where nome = '" + usuario + "';";
+    
+    validaUsuario.setEmail(txtEmail.getText());
+    validaUsuario.setSenha(txtSenha.getText());
+    
+    try{
+        String sql = ("SELECT * from usuario where email=? and senha=?");
+        
+        PreparedStatement ps = conectar.getConn().prepareStatement(sql);
+        
+        ps.setString(1, txtEmail.getText());        
+        ps.setString(2, txtSenha.getText());
+        
+        ResultSet rs = ps.executeQuery();
 
+        if(rs.next()){
+            Cadastro tela = new Cadastro();
+            tela.setVisible(true);
+            dispose();
+            JOptionPane.showMessageDialog(null, "Bem vindo");
+        }else {
+           System.out.println("deu ruim");
+
+        }
+        
+    } catch(Exception e){
+        System.out.println(e);
     }
+    }
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -89,17 +120,19 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadasActionPerformed
-        String email = txtEmail.getText();
-        String senha = txtSenha.getText();
+        String email, senha;
         
-        if(email.equals("") && senha.equals("")){
-            System.out.println("Logado");
-        }
-        else{
-            System.out.println("Não logado");
-        }
+        email = txtEmail.getText();
+        senha = txtSenha.getText(); 
+
+        Usuario validaUsuario = new Usuario();
+        validaUsuario.setEmail(email);
+        validaUsuario.setSenha(senha);
         
-   
+        verificaUsuarios(validaUsuario);
+        
+        System.out.println("usuario: " + email);
+
     }//GEN-LAST:event_btnCadasActionPerformed
 
     /**

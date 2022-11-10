@@ -73,28 +73,29 @@ public class cadUsuario extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(755, 544));
         jPanel1.setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Cadastro");
+        jLabel1.setText("Cadastrar Novo Usuário");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(316, 57, 83, 16);
+        jLabel1.setBounds(280, 30, 270, 25);
         jPanel1.add(txtNone);
-        txtNone.setBounds(33, 114, 366, 37);
+        txtNone.setBounds(210, 120, 366, 37);
         jPanel1.add(txtSenha);
-        txtSenha.setBounds(30, 270, 366, 37);
+        txtSenha.setBounds(200, 280, 366, 37);
 
         jLabel2.setText("Senha");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 240, 80, 16);
+        jLabel2.setBounds(200, 260, 80, 16);
 
         jLabel3.setText("Nome");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(30, 90, 37, 16);
+        jLabel3.setBounds(200, 100, 37, 16);
 
         jLabel4.setText("Email");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 170, 37, 16);
+        jLabel4.setBounds(200, 180, 37, 16);
         jPanel1.add(txtEmail);
-        txtEmail.setBounds(33, 192, 366, 37);
+        txtEmail.setBounds(210, 200, 366, 37);
 
         btnCad.setText("Cadastrar");
         btnCad.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +104,7 @@ public class cadUsuario extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnCad);
-        btnCad.setBounds(550, 460, 120, 50);
+        btnCad.setBounds(330, 430, 120, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

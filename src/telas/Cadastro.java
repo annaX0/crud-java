@@ -88,28 +88,29 @@ public class Cadastro extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(755, 544));
         jPanel1.setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Cadastro");
+        jLabel1.setText("Cadastro de Funcionarios");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(316, 57, 83, 16);
+        jLabel1.setBounds(270, 40, 270, 25);
         jPanel1.add(txtNone);
-        txtNone.setBounds(33, 114, 366, 37);
+        txtNone.setBounds(150, 100, 470, 37);
         jPanel1.add(txtTelefone);
-        txtTelefone.setBounds(30, 270, 366, 37);
+        txtTelefone.setBounds(150, 260, 470, 37);
 
         jLabel2.setText("Telefone");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 240, 80, 16);
+        jLabel2.setBounds(150, 230, 180, 16);
 
         jLabel3.setText("Nome");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(30, 90, 37, 16);
+        jLabel3.setBounds(150, 80, 130, 16);
 
         jLabel4.setText("CPF");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 170, 37, 16);
+        jLabel4.setBounds(150, 160, 130, 16);
         jPanel1.add(txtCpf);
-        txtCpf.setBounds(33, 192, 366, 37);
+        txtCpf.setBounds(150, 180, 470, 37);
 
         jButton1.setText("Cadastrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -118,27 +119,27 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(550, 460, 120, 50);
+        jButton1.setBounds(330, 550, 120, 50);
 
         jLabel5.setText("Função");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(30, 320, 80, 16);
+        jLabel5.setBounds(150, 310, 180, 16);
 
         jLabel6.setText("Endereço");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(30, 400, 80, 16);
+        jLabel6.setBounds(150, 390, 180, 16);
         jPanel1.add(txtEndereco);
-        txtEndereco.setBounds(30, 420, 366, 37);
+        txtEndereco.setBounds(150, 410, 470, 37);
 
         jLabel7.setText("Salário");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(30, 480, 80, 16);
+        jLabel7.setBounds(150, 470, 180, 16);
         jPanel1.add(txtSalario);
-        txtSalario.setBounds(30, 500, 366, 37);
+        txtSalario.setBounds(150, 490, 470, 37);
 
         txtFuncao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Porteiro", "Jardineiro", "Faxineira", "Cozinheira" }));
         jPanel1.add(txtFuncao);
-        txtFuncao.setBounds(30, 340, 370, 40);
+        txtFuncao.setBounds(150, 330, 470, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -148,7 +149,9 @@ public class Cadastro extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
