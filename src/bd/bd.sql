@@ -1,6 +1,8 @@
+CREATE DATABASE  IF NOT EXISTS `portaria` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `portaria`;
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: portaria
+-- Host: localhost    Database: portaria
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
@@ -25,13 +27,15 @@ DROP TABLE IF EXISTS `funcionarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `funcionarios` (
+  `idfuncionario` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) DEFAULT NULL,
   `cpf` varchar(50) DEFAULT NULL,
   `telefone` varchar(20) DEFAULT NULL,
   `funcao` varchar(50) DEFAULT NULL,
   `endereco` varchar(100) DEFAULT NULL,
-  `salario` decimal(10,0) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `salario` decimal(10,0) DEFAULT NULL,
+  PRIMARY KEY (`idfuncionario`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +44,7 @@ CREATE TABLE `funcionarios` (
 
 LOCK TABLES `funcionarios` WRITE;
 /*!40000 ALTER TABLE `funcionarios` DISABLE KEYS */;
-INSERT INTO `funcionarios` VALUES ('hfdghdfgdf','','','Porteiro','',1),('Anna','000000000','123445','Porteiro','teste, teste',1),('','','','Porteiro','',1),('','','','Porteiro','',1),('','','','Porteiro','',1900),('','','','Porteiro','',1000),('Anna','1000000','23232312','Porteiro','dsfdsf',10000);
+INSERT INTO `funcionarios` VALUES (1,'hfdghdfgdf','','','Porteiro','',1),(2,'Anna','000000000','123445','Porteiro','teste, teste',1),(3,'','','','Porteiro','',1),(4,'','','','Porteiro','',1),(5,'','','','Porteiro','',1900),(6,'','','','Porteiro','',1000),(7,'Anna','1000000','23232312','Porteiro','dsfdsf',10000);
 /*!40000 ALTER TABLE `funcionarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-10 19:42:08
+-- Dump completed on 2022-11-10 20:18:33
