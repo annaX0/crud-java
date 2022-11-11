@@ -67,6 +67,7 @@ public class cadUsuario extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         btnCad = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,7 +82,7 @@ public class cadUsuario extends javax.swing.JFrame {
         jPanel1.add(txtNone);
         txtNone.setBounds(210, 120, 366, 37);
         jPanel1.add(txtSenha);
-        txtSenha.setBounds(200, 280, 366, 37);
+        txtSenha.setBounds(210, 280, 366, 37);
 
         jLabel2.setText("Senha");
         jPanel1.add(jLabel2);
@@ -106,6 +107,15 @@ public class cadUsuario extends javax.swing.JFrame {
         jPanel1.add(btnCad);
         btnCad.setBounds(330, 430, 120, 50);
 
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnVoltar);
+        btnVoltar.setBounds(10, 10, 58, 40);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -123,6 +133,11 @@ public class cadUsuario extends javax.swing.JFrame {
     private void btnCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadActionPerformed
         cadastraUsuario(novoUsuario);
     }//GEN-LAST:event_btnCadActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        new Menu().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,6 +176,7 @@ public class cadUsuario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCad;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

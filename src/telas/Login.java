@@ -43,7 +43,7 @@ public class Login extends javax.swing.JFrame {
 
        
         if(rs.next() && !txtEmail.getText().equals("") && !txtSenha.getText().equals("")){
-            Cadastro tela = new Cadastro();
+            Menu tela = new Menu();
             tela.setVisible(true);
             dispose();
             JOptionPane.showMessageDialog(null, "Bem vindo");
@@ -84,38 +84,39 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Login");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(316, 57, 83, 16);
+        jLabel1.setBounds(250, 60, 83, 16);
         jPanel1.add(txtSenha);
-        txtSenha.setBounds(30, 200, 366, 37);
+        txtSenha.setBounds(110, 200, 366, 37);
 
         jLabel2.setText("Senha");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 180, 80, 16);
+        jLabel2.setBounds(60, 210, 40, 16);
 
         jLabel4.setText("Email");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 100, 37, 16);
+        jLabel4.setBounds(60, 130, 37, 16);
         jPanel1.add(txtEmail);
-        txtEmail.setBounds(30, 120, 366, 37);
+        txtEmail.setBounds(110, 120, 366, 37);
 
-        btnCadas.setText("Cadastrar");
+        btnCadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/adicionar-usuario (1).png"))); // NOI18N
+        btnCadas.setText("Entrar");
         btnCadas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadasActionPerformed(evt);
             }
         });
         jPanel1.add(btnCadas);
-        btnCadas.setBounds(30, 290, 120, 50);
+        btnCadas.setBounds(230, 270, 120, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
